@@ -1,0 +1,41 @@
+﻿  Collision.cpp
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(76,33): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(77,34): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6,26): warning C4099:  'ColliderComponent': type name first seen using 'class' now seen using 'struct'
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6): message :  see declaration of 'ColliderComponent'
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:         with
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:         [
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:             _Ty=int
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:         ]
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int&,int&,int&,int&,int>(int &,int &,int &,int &,int &&)' being compiled
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :         with
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :         [
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :             T=TransformComponent
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :         ]
+  ECS.cpp
+  Game.cpp
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(76,33): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(77,34): warning C4244:  '=': conversion from 'float' to 'int', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6,26): warning C4099:  'ColliderComponent': type name first seen using 'class' now seen using 'struct'
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6): message :  see declaration of 'ColliderComponent'
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:  'argument': conversion from '_Ty' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:         with
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:         [
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:             _Ty=int
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:         ]
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :  see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int&,int&,int&,int&,int>(int &,int &,int &,int &,int &&)' being compiled
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :         with
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :         [
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :             T=TransformComponent
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message :         ]
+  gameObject.cpp
+  main.cpp
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:  'argument': conversion from 'int' to 'float', possible loss of data
+  Map.cpp
+  textureManager.cpp
+  Vector2D.cpp
+  Generating Code...
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\main.cpp(25,30): warning C4244:  '=': conversion from 'Uint64' to 'int', possible loss of data
+  GameEngine.vcxproj -> C:\DEV\Visual Studio\CouchEngine\x64\Debug\GameEngine.exe
