@@ -14,6 +14,9 @@ public:
 	int length;
 	const Uint8* keystate;
 	Uint8 *firstInput;
+	Uint8* secondInput;
+	Uint8* thirdInput;
+	Uint8* fourthInput;
 	Mix_Chunk *Nice = NULL;
 
 	enum keys {
@@ -53,7 +56,7 @@ public:
 		}
 		if (keystate[Crouch])
 		{
-			transform->velocity.y = 1;
+			std::cout << "Crouch\n";
 		}
 		if (keystate[Left])
 		{
@@ -83,6 +86,9 @@ public:
 		}
 		SDL_PumpEvents();
 		std::memcpy(firstInput, keystate, length);
+		std::memcpy(secondInput, keystate, length);
+		std::memcpy(thirdInput, keystate, length);
+		std::memcpy(fourthInput, keystate, length);
 		keystate = SDL_GetKeyboardState(&length);
 	}
 };
