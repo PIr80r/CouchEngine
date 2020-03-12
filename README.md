@@ -3,8 +3,8 @@ Alright a fighting game engine
 
 # Controls as of now 
 
-#Movement
+Movement
 W A S D 
 
-#Attacks
+Attacks
 J K L N M ,
