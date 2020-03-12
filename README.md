@@ -8,3 +8,6 @@ Alright a fighting game engine
 
 **Attacks**
 > J K L N M ,
+
+# Ideas
+blah
