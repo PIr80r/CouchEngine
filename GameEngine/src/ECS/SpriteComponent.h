@@ -42,9 +42,9 @@ public:
 		Animation Hpunch = Animation(5, 0, 0);
 		Animation Grab = Animation(6, 0, 0);
 		Animation Lkick = Animation(7, 0, 0);
-		Animation Mkick = Animation(3, 0, 0);
-		Animation Hkick = Animation(3, 0, 0);
-		Animation Stand = Animation(3, 0, 0);
+		Animation Mkick = Animation(8, 0, 0);
+		Animation Hkick = Animation(9, 0, 0);
+		Animation Stand = Animation(10, 0, 0);
 
 		animations.emplace("Idle", idle);
 		animations.emplace("Walk", walk);
