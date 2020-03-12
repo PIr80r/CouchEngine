@@ -36,9 +36,27 @@ public:
 
 		Animation idle = Animation(0, 2, 500);
 		Animation walk = Animation(1, 2, 100);
+		Animation crouch = Animation(2, 0, 0);
+		Animation Lpunch = Animation(3, 0, 0);
+		Animation Mpunch = Animation(4, 0, 0);
+		Animation Hpunch = Animation(5, 0, 0);
+		Animation Grab = Animation(6, 0, 0);
+		Animation Lkick = Animation(7, 0, 0);
+		Animation Mkick = Animation(3, 0, 0);
+		Animation Hkick = Animation(3, 0, 0);
+		Animation Stand = Animation(3, 0, 0);
 
 		animations.emplace("Idle", idle);
 		animations.emplace("Walk", walk);
+		animations.emplace("Crouch", crouch);
+		animations.emplace("Lpunch", Lpunch);
+		animations.emplace("Mpunch", Mpunch);
+		animations.emplace("Hpunch", Hpunch);
+		animations.emplace("Grab", Grab);
+		animations.emplace("Lkick", Lkick);
+		animations.emplace("Mkick", Mkick);
+		animations.emplace("Hkick", Hkick);
+		animations.emplace("Stand", Stand);
 
 		Play("Idle");
 
