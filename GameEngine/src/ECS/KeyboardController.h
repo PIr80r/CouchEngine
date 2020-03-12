@@ -63,9 +63,19 @@ public:
 			transform->velocity.x = -1;
 			sprite->spriteFlip = SDL_FLIP_HORIZONTAL;
 		}
+		if (keystate[Left] && !secondInput[Left] && firstInput[Left])
+		{
+			transform->velocity.x = -2;
+			sprite->spriteFlip = SDL_FLIP_HORIZONTAL;
+		}
 		if (keystate[Right])
 		{
 			transform->velocity.x = 1;
+			sprite->spriteFlip = SDL_FLIP_NONE;
+		}
+		if (keystate[Right] && !secondInput[Right] && firstInput[Right])
+		{
+			transform->velocity.x = 2;
 			sprite->spriteFlip = SDL_FLIP_NONE;
 		}
 		if (!keystate[Jump] && !keystate[Crouch])
