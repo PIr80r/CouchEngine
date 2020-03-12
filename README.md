@@ -10,4 +10,4 @@ Alright a fighting game engine
 > J K L N M ,
 
 # Ideas
-blah
+All characters are different animation styles
