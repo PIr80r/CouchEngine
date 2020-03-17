@@ -1,7 +1,9 @@
 #pragma once
 #include "ECS.h"
+#include "TimerComponent.h"
 #include "TransformComponent.h"
 #include "SpriteComponent.h"
+#include "StateComponent.h"
 #include "KeyboardController.h"
 #include "ColliderComponent.h"
 #include "TileComponent.h"

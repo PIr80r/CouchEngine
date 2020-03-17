@@ -1,1 +1,35 @@
-﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets(67,5): error MSB8020: The build tools for v142 (Platform Toolset = 'v142') cannot be found. To build using the v142 build tools, please install v142 build tools.  Alternatively, you may upgrade to the current Visual Studio tools by selecting the Project menu or right-click the solution, and then selecting "Retarget solution".
+﻿  Collision.cpp
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(96,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(97,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6,26): warning C4099: 'ColliderComponent': type name first seen using 'class' now seen using 'struct'
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6): message : see declaration of 'ColliderComponent'
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message : see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int&,int&,int&,int&,int>(int &,int &,int &,int &,int &&)' being compiled
+          with
+          [
+              T=TransformComponent
+          ]
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Game.cpp
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(96,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(97,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6,26): warning C4099: 'ColliderComponent': type name first seen using 'class' now seen using 'struct'
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6): message : see declaration of 'ColliderComponent'
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
+          with
+          [
+              _Ty=int
+          ]
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message : see reference to function template instantiation 'T &Entity::addComponent<TransformComponent,int&,int&,int&,int&,int>(int &,int &,int &,int &,int &&)' being compiled
+          with
+          [
+              T=TransformComponent
+          ]
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Generating Code...
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\StateComponent.h(35): warning C4715: 'StateComponent::checkTimeFalse': not all control paths return a value
+  GameEngine.vcxproj -> C:\DEV\Visual Studio\CouchEngine\x64\Debug\GameEngine.exe

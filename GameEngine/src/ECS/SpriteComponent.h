@@ -48,7 +48,7 @@ public:
 		Animation Stand = Animation(11, 0, 0);
 
 		animations.emplace("Idle", idle);
-		animations.emplace("Walk", walk)
+		animations.emplace("Walk", walk);
 		animations.emplace("Dash", dash);
 		animations.emplace("Crouch", crouch);
 		animations.emplace("Lpunch", Lpunch);
