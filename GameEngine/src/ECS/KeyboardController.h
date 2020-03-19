@@ -73,7 +73,7 @@ public:
 			transform->velocity.x = -1;
 			
 		}
-		if (keystate[Left] && !oldKeystate[Left] && state->checkTimeFalse(state->walking, 500u))
+		if (keystate[Left] && !oldKeystate[Left] && !state->checkTimeFalse(state->walking, 500u))
 		{
 			transform->velocity.x = -5;
 			std::cout << "Dashing\n";
@@ -84,7 +84,7 @@ public:
 			sprite->spriteFlip = SDL_FLIP_NONE;
 			transform->velocity.x = 1;
 		}
-		if (keystate[Right] && !oldKeystate[Right] && state->checkTimeFalse(state->walking, 500u))
+		if (keystate[Right] && !oldKeystate[Right] && !state->checkTimeFalse(state->walking, 500u))
 		{
 			transform->velocity.x = 5;
 			std::cout << "Dashing\n";
