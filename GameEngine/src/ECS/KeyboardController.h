@@ -16,7 +16,7 @@ public:
 	int length;
 	const Uint8* keystate;
 	Uint8 *oldKeystate;
-	Uint32 elapsed, current;
+	Uint32 elapsed, current,windowT;
 	Mix_Chunk *Nice = NULL;
 
 	enum keys {
@@ -39,6 +39,7 @@ public:
 		state = &entity->getComponent<StateComponent>();
 		timer = TimerComponent();
 		elapsed = 0u;
+		windowT = 500u;
 		Uint32 current = 0u;
 		keystate = SDL_GetKeyboardState(&length);
 		oldKeystate = new Uint8[length];
@@ -73,7 +74,7 @@ public:
 			transform->velocity.x = -1;
 			
 		}
-		if (keystate[Left] && !oldKeystate[Left] && !state->checkTimeFalse(state->walking, 500u))
+		if (keystate[Left] && !oldKeystate[Left] && !state->checkTimeFalse(state->walking, windowT))
 		{
 			transform->velocity.x = -5;
 			std::cout << "Dashing\n";
@@ -84,7 +85,7 @@ public:
 			sprite->spriteFlip = SDL_FLIP_NONE;
 			transform->velocity.x = 1;
 		}
-		if (keystate[Right] && !oldKeystate[Right] && !state->checkTimeFalse(state->walking, 500u))
+		if (keystate[Right] && !oldKeystate[Right] && !state->checkTimeFalse(state->walking, windowT))
 		{
 			transform->velocity.x = 5;
 			std::cout << "Dashing\n";
