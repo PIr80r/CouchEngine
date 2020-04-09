@@ -165,6 +165,7 @@
     <ClInclude Include="src\ECS\ColliderComponent.h" />
     <ClInclude Include="src\ECS\Components.h" />
     <ClInclude Include="src\ECS\ECS.h" />
+    <ClInclude Include="src\ECS\CharacterComponent.h" />
     <ClInclude Include="src\ECS\StateComponent.h" />
     <ClInclude Include="src\ECS\KeyboardController.h" />
     <ClInclude Include="src\ECS\TileComponent.h" />

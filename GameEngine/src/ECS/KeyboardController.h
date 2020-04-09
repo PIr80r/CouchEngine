@@ -11,6 +11,7 @@ class KeyboardController : public Component
 public:
 	TransformComponent *transform;
 	SpriteComponent *sprite;
+	CharacterComponent *chr;
 	StateComponent *state;
 	TimerComponent timer;
 	int length;
@@ -37,6 +38,7 @@ public:
 		transform = &entity->getComponent<TransformComponent>();
 		sprite = &entity->getComponent<SpriteComponent>();
 		state = &entity->getComponent<StateComponent>();
+		chr = &entity->getComponent<CharacterComponent>();
 		timer = TimerComponent();
 		elapsed = 0u;
 		windowT = 500u;
@@ -71,23 +73,23 @@ public:
 		{
 			sprite->Play("Walk");
 			sprite->spriteFlip = SDL_FLIP_HORIZONTAL;
-			transform->velocity.x = -1;
+			transform->velocity.x = -1 * chr->speed;
 			
 		}
 		if (keystate[Left] && !oldKeystate[Left] && !state->checkTimeFalse(state->walking, windowT))
 		{
-			transform->velocity.x = -5;
+			transform->velocity.x = -2 * chr->speed;
 			std::cout << "Dashing\n";
 		}
 		if (keystate[Right])
 		{
 			sprite->Play("Walk");
 			sprite->spriteFlip = SDL_FLIP_NONE;
-			transform->velocity.x = 1;
+			transform->velocity.x = chr->speed;
 		}
 		if (keystate[Right] && !oldKeystate[Right] && !state->checkTimeFalse(state->walking, windowT))
 		{
-			transform->velocity.x = 5;
+			transform->velocity.x = 2 * chr->speed;
 			std::cout << "Dashing\n";
 		}
 		

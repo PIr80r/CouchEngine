@@ -3,6 +3,7 @@
 #include "TimerComponent.h"
 #include "TransformComponent.h"
 #include "SpriteComponent.h"
+#include "CharacterComponent.h"
 #include "StateComponent.h"
 #include "KeyboardController.h"
 #include "ColliderComponent.h"
