@@ -63,20 +63,17 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	{
 		isRunning = false;
 	}
-	map = new Map();
+	//map = new Map();
 
-	Map::loadMap("Assets/Level_1.map", 16, 16);
+	//Map::loadMap("Assets/Level_1.map", 16, 16);
 
 	Player.addComponent<TransformComponent>(0,0,180,180,1.0f);
 	Player.addComponent<SpriteComponent>("Assets/Player_anims.png", true);
+	Player.addComponent<StateComponent>(false);
+	Player.addComponent<CharacterComponent>("Cheezybun");
 	Player.addComponent<KeyboardController>();
 	Player.addComponent<ColliderComponent>("Player");
 	Player.addGroup(groupPlayers);
-
-	wall.addComponent<TransformComponent>(600.f, 300.f, 20, 300, 1.0f);
-	wall.addComponent<SpriteComponent>("Assets/Bg2.png");
-	wall.addComponent<ColliderComponent>("wall");
-	wall.addGroup(groupMap);
 }
 
 void Game::handleEvents()

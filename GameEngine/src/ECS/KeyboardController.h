@@ -11,12 +11,13 @@ class KeyboardController : public Component
 public:
 	TransformComponent *transform;
 	SpriteComponent *sprite;
+	CharacterComponent *chr;
+	StateComponent *state;
+	TimerComponent timer;
 	int length;
 	const Uint8* keystate;
-	Uint8 *firstInput;
-	Uint8* secondInput;
-	Uint8* thirdInput;
-	Uint8* fourthInput;
+	Uint8 *oldKeystate;
+	Uint32 elapsed, current,windowT;
 	Mix_Chunk *Nice = NULL;
 
 	enum keys {
@@ -36,14 +37,23 @@ public:
 	{
 		transform = &entity->getComponent<TransformComponent>();
 		sprite = &entity->getComponent<SpriteComponent>();
+		state = &entity->getComponent<StateComponent>();
+		chr = &entity->getComponent<CharacterComponent>();
+		timer = TimerComponent();
+		elapsed = 0u;
+		windowT = 500u;
+		Uint32 current = 0u;
 		keystate = SDL_GetKeyboardState(&length);
-		firstInput = new Uint8[length];
+		oldKeystate = new Uint8[length];
 		Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, 2, 2048);
+		timer.start();
 		Nice = Mix_LoadWAV("Assets/nice.wav");
 	}
 
 	void update() override
 	{
+		elapsed = timer.elapsed();
+		
 		if (keystate[SDL_SCANCODE_SPACE])
 		{	
 			if (Mix_Playing(0) == 0) {
@@ -52,7 +62,8 @@ public:
 		}
 		if (keystate[Jump])
 		{
-			transform->velocity.y = -1;
+			std::cout << "Jump\n";
+			state->jumping = true;
 		}
 		if (keystate[Crouch])
 		{
@@ -60,35 +71,56 @@ public:
 		}
 		if (keystate[Left])
 		{
-			transform->velocity.x = -1;
+			sprite->Play("Walk");
 			sprite->spriteFlip = SDL_FLIP_HORIZONTAL;
+			transform->velocity.x = -1 * chr->speed;
+			
+		}
+		if (keystate[Left] && !oldKeystate[Left] && !state->checkTimeFalse(state->walking, windowT))
+		{
+			transform->velocity.x = -2 * chr->speed;
+			std::cout << "Dashing\n";
 		}
 		if (keystate[Right])
 		{
-			transform->velocity.x = 1;
+			sprite->Play("Walk");
 			sprite->spriteFlip = SDL_FLIP_NONE;
+			transform->velocity.x = chr->speed;
 		}
+		if (keystate[Right] && !oldKeystate[Right] && !state->checkTimeFalse(state->walking, windowT))
+		{
+			transform->velocity.x = 2 * chr->speed;
+			std::cout << "Dashing\n";
+		}
+		
+		/*if (keystate[Right] && !secondInput[Right] && firstInput[Right])
+		{
+			sprite->Play("Walk");
+			transform->velocity.x = 5;
+			std::cout << "Dashing\n";
+			sprite->spriteFlip = SDL_FLIP_NONE;
+		}*/
 		if (!keystate[Jump] && !keystate[Crouch])
 		{
-			transform->velocity.y = 0;
+			state->jumping = false;
 		}
 		if (!keystate[Left] && !keystate[Right])
 		{
 			transform->velocity.x = 0;
 		}
-		if (transform->velocity.x > 0 || transform->velocity.x < 0 || transform->velocity.y > 0 || transform->velocity.y < 0)
+		if (transform->velocity.x > 0 || transform->velocity.x < 0)
 		{
-			sprite->Play("Walk");
+			state->walking = true;
 		}
-		else
+		if (transform->velocity.x == 0)
 		{
+			current = timer.getTicks();
 			sprite->Play("Idle");
+			state->walking = false;
 		}
+		std::cout << elapsed / 1000u << std::endl;
+		std::memcpy(oldKeystate, keystate, length);
 		SDL_PumpEvents();
-		std::memcpy(firstInput, keystate, length);
-		std::memcpy(secondInput, keystate, length);
-		std::memcpy(thirdInput, keystate, length);
-		std::memcpy(fourthInput, keystate, length);
 		keystate = SDL_GetKeyboardState(&length);
 	}
 };
