@@ -53,7 +53,8 @@ public:
 	void update() override
 	{
 		elapsed = timer.elapsed();
-		
+		keystate = SDL_GetKeyboardState(&length);
+
 		if (keystate[SDL_SCANCODE_SPACE])
 		{	
 			if (Mix_Playing(0) == 0) {
@@ -118,9 +119,9 @@ public:
 			sprite->Play("Idle");
 			state->walking = false;
 		}
+		
 		std::cout << elapsed / 1000u << std::endl;
 		std::memcpy(oldKeystate, keystate, length);
 		SDL_PumpEvents();
-		keystate = SDL_GetKeyboardState(&length);
 	}
 };
