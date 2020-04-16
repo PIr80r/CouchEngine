@@ -19,6 +19,10 @@ public:
 	Uint8 *oldKeystate;
 	Uint32 elapsed, current,windowT;
 	Mix_Chunk *Nice = NULL;
+	bool test;
+
+
+	
 
 	enum keys {
 		Jump = SDL_SCANCODE_W,
@@ -41,7 +45,7 @@ public:
 		chr = &entity->getComponent<CharacterComponent>();
 		timer = TimerComponent();
 		elapsed = 0u;
-		windowT = 500u;
+		windowT = 150u;
 		Uint32 current = 0u;
 		keystate = SDL_GetKeyboardState(&length);
 		oldKeystate = new Uint8[length];
@@ -50,78 +54,119 @@ public:
 		Nice = Mix_LoadWAV("Assets/nice.wav");
 	}
 
+	void inputRefresh()
+	{
+		keystate = SDL_GetKeyboardState(&length);
+		memcpy(oldKeystate, keystate, length);
+	}
+
+	bool keyDown(KeyboardController::keys scancode)
+	{
+		return keystate[scancode];
+	}
+	
+	bool keyDown(SDL_Scancode scancode)
+	{
+		return keystate[scancode];
+	}
+
+	bool keyPressed(KeyboardController::keys scancode)
+	{
+		return !oldKeystate[scancode] && keystate[scancode];
+	}
+	
+	bool keyPressed(SDL_Scancode scancode)
+	{
+		return !oldKeystate[scancode] && keystate[scancode];
+	}
+	
+	bool keyReleased(KeyboardController::keys scancode)
+	{
+		return oldKeystate[scancode] && !keystate[scancode];
+	}
+
+	bool keyReleased(SDL_Scancode scancode)
+	{
+		return oldKeystate[scancode] && !keystate[scancode];
+	}
+
 	void update() override
 	{
 		elapsed = timer.elapsed();
-		keystate = SDL_GetKeyboardState(&length);
 
-		if (keystate[SDL_SCANCODE_SPACE])
+		if (keyPressed(SDL_SCANCODE_SPACE))
 		{	
 			if (Mix_Playing(0) == 0) {
 				Mix_PlayChannel(0, Nice, 0);
 			}
 		}
-		if (keystate[Jump])
+		if (keyDown(Jump))
 		{
 			std::cout << "Jump\n";
 			state->jumping = true;
 		}
-		if (keystate[Crouch])
+		if (keyReleased(Jump))
 		{
-			std::cout << "Crouch\n";
+			std::cout << "Falling\n";
+			state->jumping = false;
 		}
-		if (keystate[Left])
+		if (keyDown(Crouch))
+		{
+			std::cout << "Crouching\n";
+		}
+		if (keyDown(Left))
 		{
 			sprite->Play("Walk");
 			sprite->spriteFlip = SDL_FLIP_HORIZONTAL;
-			transform->velocity.x = -1 * chr->speed;
-			
-		}
-		if (keystate[Left] && !oldKeystate[Left] && !state->checkTimeFalse(state->walking, windowT))
-		{
-			transform->velocity.x = -2 * chr->speed;
-			std::cout << "Dashing\n";
-		}
-		if (keystate[Right])
-		{
-			sprite->Play("Walk");
-			sprite->spriteFlip = SDL_FLIP_NONE;
-			transform->velocity.x = chr->speed;
-		}
-		if (keystate[Right] && !oldKeystate[Right] && !state->checkTimeFalse(state->walking, windowT))
-		{
-			transform->velocity.x = 2 * chr->speed;
-			std::cout << "Dashing\n";
+			cout << "walking left\n";
+			if(state->walking == false)
+			{
+				transform->velocity.x = -1 * chr->speed;
+				state->walking = true;
+			}
+			if (test)
+			{
+				state->dashing = true;
+				cout << "Dashing\n";
+				transform->velocity.x = -2 * chr->speed;
+			}
 		}
 		
-		/*if (keystate[Right] && !secondInput[Right] && firstInput[Right])
+		if (keyDown(Right))
 		{
 			sprite->Play("Walk");
-			transform->velocity.x = 5;
-			std::cout << "Dashing\n";
+			cout << "Walking right\n";
 			sprite->spriteFlip = SDL_FLIP_NONE;
-		}*/
-		if (!keystate[Jump] && !keystate[Crouch])
-		{
-			state->jumping = false;
+			
+			if (state->walking == false)
+			{
+				transform->velocity.x = 1 * chr->speed;
+				state->walking = true;
+			}
+			if (test)
+			{
+				state->dashing = true;
+				cout << "Dashing\n";
+				transform->velocity.x = 2 * chr->speed;
+			}
 		}
-		if (!keystate[Left] && !keystate[Right])
+		if (keyReleased(Left) || keyReleased(Right))
 		{
-			transform->velocity.x = 0;
-		}
-		if (transform->velocity.x > 0 || transform->velocity.x < 0)
-		{
-			state->walking = true;
-		}
-		if (transform->velocity.x == 0)
-		{
-			current = timer.getTicks();
 			sprite->Play("Idle");
-			state->walking = false;
+			transform->velocity.x = 0;
+			if (state->walking == true)
+			{
+				test = state->checkTimeTrue(state->walking, windowT);
+			}
+			if (state->checkTimeTrue(state->walking, windowT + 1u))
+			{
+				test = false;
+				state->walking = false;
+				state->dashing = false;
+			}
 		}
 		
 		std::cout << elapsed / 1000u << std::endl;
-		std::memcpy(oldKeystate, keystate, length);
-		SDL_PumpEvents();
+		inputRefresh();
 	}
 };

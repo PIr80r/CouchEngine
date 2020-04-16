@@ -1,10 +1,10 @@
 ﻿  Collision.cpp
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(96,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(97,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(77,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(82,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(89,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(93,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(124,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(131,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(143,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(150,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6,26): warning C4099: 'ColliderComponent': type name first seen using 'class' now seen using 'struct'
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6): message : see declaration of 'ColliderComponent'
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
@@ -21,10 +21,10 @@ C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244:
   Game.cpp
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(96,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(97,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(77,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(82,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(89,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(93,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(124,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(131,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(143,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\KeyboardController.h(150,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6,26): warning C4099: 'ColliderComponent': type name first seen using 'class' now seen using 'struct'
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6): message : see declaration of 'ColliderComponent'
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
@@ -39,5 +39,5 @@ C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message
           ]
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Generating Code...
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\StateComponent.h(35): warning C4715: 'StateComponent::checkTimeFalse': not all control paths return a value
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\StateComponent.h(59): warning C4715: 'StateComponent::checkTimeTrue': not all control paths return a value
   GameEngine.vcxproj -> C:\DEV\Visual Studio\CouchEngine\x64\Debug\GameEngine.exe

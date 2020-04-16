@@ -6,8 +6,7 @@
 class StateComponent : public Component
 {
 public:
-	bool walking;
-	bool jumping;
+	bool walking,jumping,dashing;
 	TimerComponent counter;
 	
 	StateComponent() = default;
@@ -15,12 +14,13 @@ public:
 	StateComponent(bool r) {
 		walking = r;
 		jumping = r;
+		dashing = r;
 	}
 
 	bool checkTimeFalse(bool cond, Uint32 ms)
 	{
 			counter.start();
-			while (!cond)
+			if(!cond)
 			{
 				if (SDL_GetTicks() >= ms + counter.getTicks())
 				{
@@ -32,12 +32,16 @@ public:
 				}
 
 			}
+			else
+			{
+				return false;
+			}
 	}
 
 	bool checkTimeTrue(bool cond, Uint32 ms)
 	{
 		counter.start();
-		while (cond)
+		if (cond)
 		{
 			if (SDL_GetTicks() >= ms + counter.getTicks())
 			{
@@ -47,7 +51,10 @@ public:
 			{
 				return false;
 			}
-
+		}
+		else
+		{
+			return false;
 		}
 	}
 	
