@@ -151,6 +151,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\Collision.cpp" />
+    <ClCompile Include="src\ECS\CharacterInput.h" />
     <ClCompile Include="src\ECS\ECS.cpp" />
     <ClCompile Include="src\Game.cpp" />
     <ClCompile Include="src\gameObject.cpp" />
@@ -164,10 +165,11 @@
     <ClInclude Include="src\ECS\Animation.h" />
     <ClInclude Include="src\ECS\ColliderComponent.h" />
     <ClInclude Include="src\ECS\Components.h" />
+    <ClInclude Include="src\ECS\ConfigKeys.h" />
     <ClInclude Include="src\ECS\ECS.h" />
     <ClInclude Include="src\ECS\CharacterComponent.h" />
     <ClInclude Include="src\ECS\StateComponent.h" />
-    <ClInclude Include="src\ECS\KeyboardController.h" />
+    <ClInclude Include="src\ECS\KeyboardReader.h" />
     <ClInclude Include="src\ECS\TileComponent.h" />
     <ClInclude Include="src\ECS\TimerComponent.h" />
     <ClInclude Include="src\ECS\TransformComponent.h" />

@@ -1,4 +1,5 @@
 #pragma once
+
 #include "Components.h"
 #include "SpriteComponent.h"
 #include "SDL.h"
@@ -15,47 +16,6 @@ public:
 		walking = r;
 		jumping = r;
 		dashing = r;
-	}
-
-	bool checkTimeFalse(bool cond, Uint32 ms)
-	{
-			counter.start();
-			if(!cond)
-			{
-				if (SDL_GetTicks() >= ms + counter.getTicks())
-				{
-					return true;
-				}
-				else if (SDL_GetTicks() < ms + counter.getTicks())
-				{
-					return false;
-				}
-
-			}
-			else
-			{
-				return false;
-			}
-	}
-
-	bool checkTimeTrue(bool cond, Uint32 ms)
-	{
-		counter.start();
-		if (cond)
-		{
-			if (SDL_GetTicks() >= ms + counter.getTicks())
-			{
-				return true;
-			}
-			else if (SDL_GetTicks() < ms + counter.getTicks())
-			{
-				return false;
-			}
-		}
-		else
-		{
-			return false;
-		}
 	}
 	
 	void init() override

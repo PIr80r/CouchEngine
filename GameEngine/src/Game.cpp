@@ -71,8 +71,9 @@ void Game::init(const char* title, int xpos, int ypos, int width, int height, bo
 	Player.addComponent<SpriteComponent>("Assets/Player_anims.png", true);
 	Player.addComponent<StateComponent>(false);
 	Player.addComponent<CharacterComponent>("Cheezybun");
-	Player.addComponent<KeyboardController>();
 	Player.addComponent<ColliderComponent>("Player");
+	Player.addComponent<KeyboardReader>();
+	Player.addComponent<CharacterInput>();
 	Player.addGroup(groupPlayers);
 }
 
