@@ -1,10 +1,12 @@
 #pragma once
 
 #include "../Game.h"
-#include "ECS.h"
 #include "Components.h"
 #include "SDL.h"
 #include "SDL_mixer.h"
+
+#ifndef CHARACTERINPUT_HEADER
+#define CHARACTERINPUT_HEADER
 
 class CharacterInput : public Component
 {
@@ -116,3 +118,4 @@ public:
 		std::cout << elapsed / 1000u << std::endl;
 	}
 };
+#endif 

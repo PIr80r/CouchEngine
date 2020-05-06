@@ -1,12 +1,12 @@
-﻿  Collision.cpp
+﻿  CharacterInput.h
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(96,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(97,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(70,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(79,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(90,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(98,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6,26): warning C4099: 'ColliderComponent': type name first seen using 'class' now seen using 'struct'
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6): message : see declaration of 'ColliderComponent'
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(72,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(81,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(92,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(100,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
@@ -18,26 +18,15 @@ C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message
               T=TransformComponent
           ]
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-  CharacterInput.h
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(96,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(97,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6,26): warning C4099: 'ColliderComponent': type name first seen using 'class' now seen using 'struct'
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6): message : see declaration of 'ColliderComponent'
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(70,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(79,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(90,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(98,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(9,22): error C2011: 'CharacterInput': 'class' type redefinition
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(9): message : see declaration of 'CharacterInput'
   Game.cpp
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(96,33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\SpriteComponent.h(97,34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6,26): warning C4099: 'ColliderComponent': type name first seen using 'class' now seen using 'struct'
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ColliderComponent.h(6): message : see declaration of 'ColliderComponent'
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(70,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(79,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(90,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(98,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(72,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(81,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(92,31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\CharacterInput.h(100,30): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from '_Ty' to 'float', possible loss of data
           with
           [
@@ -50,3 +39,4 @@ C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\TileComponent.h(45): message
           ]
 C:\DEV\Visual Studio\CouchEngine\GameEngine\src\ECS\ECS.h(96,33): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
   Generating Code...
+  GameEngine.vcxproj -> C:\DEV\Visual Studio\CouchEngine\x64\Debug\GameEngine.exe
